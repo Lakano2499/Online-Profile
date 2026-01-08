@@ -58,6 +58,17 @@
 }
 
 @media (min-width: 1200px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9998;
+    transition: all 0.3s;
+    padding: 20px 0;
+    width: 300px;
+    overflow-y: auto;
+  }
 
   .header~main,
   .header~#footer {
@@ -67,7 +78,15 @@
 
 @media (max-width: 1199px) {
   .header {
+    position: fixed;
+    top: 0;
     left: -100%;
+    bottom: 0;
+    width: 300px;
+    z-index: 9998;
+    transition: all 0.3s;
+    padding: 20px 0;
+    overflow-y: auto;
   }
 }
 
@@ -98,6 +117,38 @@
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
+/* Navigation menu in dark header */
+.header.dark-background .navmenu {
+  background-color: var(--nav-mobile-background-color);
+}
+
+.header.dark-background .navmenu ul {
+  background-color: var(--nav-mobile-background-color);
+}
+
+/* Additional header elements in dark theme */
+.header.dark-background {
+  background-color: var(--nav-mobile-background-color);
+  color: var(--nav-color);
+}
+
+.header.dark-background .profile-img {
+  background-color: transparent;
+}
+
+.header.dark-background .logo {
+  color: var(--contrast-color);
+}
+
+.header.dark-background .social-links a {
+  color: var(--nav-color);
+}
+
+.header.dark-background .header-toggle {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -108,6 +159,7 @@
 .navmenu {
   padding: 0;
   z-index: 9997;
+ background-color: var(--nav-mobile-background-color);
 }
 
 .navmenu ul {
