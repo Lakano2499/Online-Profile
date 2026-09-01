@@ -3,326 +3,532 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>My Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeron Jhed V. Lachano — Computer Science Student & Aspiring Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Aeron Jhed V. Lachano, a fourth-year Computer Science student at Laguna State Polytechnic University with experience in web development, machine learning, game development, and collaborative software projects.">
+  <meta name="keywords" content="Aeron Jhed Lachano, Computer Science, Portfolio, Software Developer, Full-Stack Developer, LSPU">
 
-  <!-- Favicons -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aeron Jhed V. Lachano — Portfolio">
+  <meta property="og:description" content="Fourth-year Computer Science student with experience in web development, machine learning, game development, and collaborative software projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lakano2499.github.io/Online-Profile/">
+
+  <!-- Favicon -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (icon font only) -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Portfolio CSS -->
+  <link href="assets/css/portfolio.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: iPortfolio
+  * Original Template: iPortfolio by BootstrapMade.com
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
+  * Redesigned by Aeron Jhed V. Lachano
   ======================================================== -->
 </head>
 
-<body class="index-page dark-background">
+<body>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__brand">Aeron<span>.</span></a>
 
-    <div class="profile-img">
-      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Aeron Lachano</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https://github.com/Lakano2499" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://web.facebook.com/aeron.lachano.3" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.linkedin.com/in/aeron-jhed-lachano-a6b87637b/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <!-- <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li> -->
-      </ul>
-    </nav>
-
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Aeron Lachano</h2>
-        <p>I'm <span class="typed" data-typed-items="Developer, Designer, Student">Developer</span><span class="typed-cursor typed-cursor--blink" 
-          aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <div class="navbar__links" id="nav-links" role="menubar">
+        <a href="#home" class="navbar__link active" role="menuitem">Home</a>
+        <a href="#projects" class="navbar__link" role="menuitem">Projects</a>
+        <a href="#about" class="navbar__link" role="menuitem">About</a>
+        <a href="#skills" class="navbar__link" role="menuitem">Skills</a>
+        <a href="#experience" class="navbar__link" role="menuitem">Experience</a>
+        <a href="#contact" class="navbar__link" role="menuitem">Contact</a>
       </div>
 
-    </section><!-- /Hero Section -->
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <svg class="hamburger-bars" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="hamburger-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about section dark-background">
+  <main>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>💻 I’m a Computer Science student with a strong interest in software development, problem-solving, 
-          and exploring how technology can create real-world impact. Currently building my skills in programming, algorithms, 
-          and systems, while also working on projects that sharpen my practical experience. Passionate about continuous learning, 
-          collaboration, and growing into a well-rounded tech professional.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Aeron Jhed V. Lachano</h1>
+          <p class="hero__headline">Computer Science Student &amp; Aspiring Full-Stack Developer</p>
+          <p class="hero__intro">
+            Fourth-year BS Computer Science student at Laguna State Polytechnic University
+            with hands-on experience in web development, machine learning, game development,
+            and team-based software projects. Looking for OJT and internship opportunities
+            where I can apply and grow my skills.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">
+              <i class="bi bi-code-slash" aria-hidden="true"></i> View My Projects
+            </a>
+            <a href="#contact" class="btn btn--outline">
+              <i class="bi bi-envelope" aria-hidden="true"></i> Contact Me
+            </a>
           </div>
-          <div class="col-lg-8 content">
-            <h2>Web Developer.</h2>
-            <p class="fst-italic py-3">
-              I specialize in building responsive, user-friendly web applications that solve real user problems. 
-              My focus is on writing clean, efficient code and bridging the gap between elegant design and technical implementation.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>September 9,2004</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span>https://github.com/Lakano2499</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+6392 274 0033</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Laguna, Philippines</span></li>
-                </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURED PROJECTS ═══════════ -->
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Portfolio</p>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Projects I've built or contributed to, with real-world impact and practical application.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- SafeScape — Featured Card -->
+          <article class="project-card project-card--featured">
+            <img
+              src="assets/img/project-safescape.png"
+              alt="Screenshot of the Berong SafeScape fire safety education platform showing the dashboard with learning modules, quizzes, and progress tracking"
+              class="project-card__image"
+              loading="lazy"
+            >
+            <div class="project-card__body">
+              <h3 class="project-card__title">Berong SafeScape</h3>
+              <p class="project-card__desc">
+                A web-based fire safety education platform built for the BFP Santa Cruz community.
+                Features age-segmented learning paths, interactive safety games, quizzes, a badge
+                system, and certificate generation for community members.
+              </p>
+              <p class="project-card__role">
+                Team contribution — Developed the Task Master interactive game module within the Kids dashboard.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">Inertia.js</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Game Logic</span>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Computer Science</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>lachano2499@gmail.com</span></li>
-                </ul>
+              <div class="project-card__links">
+                <a href="https://bfpscberong.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Site
+                </a>
               </div>
             </div>
-            <p class="py-3">
-              Beyond technical skills, I am a firm believer in the power of collaboration and continuous improvement. 
-              I approach every project with a detail-oriented mindset and a hunger to learn. Whether working independently or within a team,
-              I am committed to delivering high-quality results and adapting to the ever-evolving landscape of web technology.
-            </p>
-          </div>
+          </article>
+
+          <!-- Fire Inspector Game -->
+          <article class="project-card">
+            <img
+              src="assets/img/project-fire-game.jpg"
+              alt="Screenshot of the Fire Inspector Game — a 2D pixel art game where players inspect buildings for fire hazards"
+              class="project-card__image"
+              loading="lazy"
+            >
+            <div class="project-card__body">
+              <h3 class="project-card__title">Fire Inspector Game</h3>
+              <p class="project-card__desc">
+                A complete 2D game built with the Godot engine where players take on the role
+                of a fire inspector, identifying hazards and ensuring building safety through
+                gameplay, asset integration, and level design.
+              </p>
+              <p class="project-card__role">
+                Solo project — Full game design and development.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Godot</span>
+                <span class="tech-tag">GDScript</span>
+                <span class="tech-tag">2D Game Design</span>
+                <span class="tech-tag">Asset Integration</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Lakano2499/Fire_Inspector_Game" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                  <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ecommerce Mobile App -->
+          <article class="project-card">
+            <img
+              src="assets/img/project-flutter.jpg"
+              alt="Screenshot of a Flutter ecommerce mobile application showing a product listing grid with add-to-cart buttons"
+              class="project-card__image"
+              loading="lazy"
+            >
+            <div class="project-card__body">
+              <h3 class="project-card__title">Ecommerce Mobile App</h3>
+              <p class="project-card__desc">
+                A mobile shopping application with product browsing, user authentication,
+                and a dynamic cart system. Built using Flutter with Material Design UI
+                principles and a Figma-based design workflow.
+              </p>
+              <p class="project-card__role">
+                Solo project — Full-stack mobile development.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Material Design</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                  <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ML / NLP Projects -->
+          <article class="project-card">
+            <img
+              src="assets/img/project-ml-nlp.jpg"
+              alt="Screenshot of a Jupyter Notebook with BERT text classification code, confusion matrix, and NLP pipeline output"
+              class="project-card__image"
+              loading="lazy"
+            >
+            <div class="project-card__body">
+              <h3 class="project-card__title">ML &amp; NLP Projects</h3>
+              <p class="project-card__desc">
+                A collection of machine learning and natural language processing course projects
+                covering text classification with BERT, text preprocessing with spaCy and NLTK,
+                and data analysis workflows.
+              </p>
+              <p class="project-card__role">
+                Coursework — Research and implementation.
+              </p>
+              <div class="project-card__tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">BERT</span>
+                <span class="tech-tag">spaCy</span>
+                <span class="tech-tag">NLTK</span>
+                <span class="tech-tag">Jupyter</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/Lakano2499/CSST102-3B-AY2526" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                  <i class="bi bi-github" aria-hidden="true"></i> CSST102
+                </a>
+                <a href="https://github.com/Lakano2499/CSST104-3B-AY2526" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">
+                  <i class="bi bi-github" aria-hidden="true"></i> CSST104
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section dark-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>I possess a solid foundation in web development and data processing, with a growing proficiency in mobile app development and object-oriented programming.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Dart</span> <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>C#</span> <i class="val">20%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">10%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section dark-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div><!-- End Section Title -->
-
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="section">
       <div class="container">
-        
-        <div class="row">
+        <div class="section-header">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">A bit about who I am</h2>
+        </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
+        <div class="about-grid">
+          <img
+            src="assets/img/profile-400.jpg"
+            alt="Portrait of Aeron Jhed V. Lachano"
+            class="about__photo"
+            width="400"
+            height="400"
+          >
+          <div class="about__text">
+            <p>
+              I'm a fourth-year Computer Science student at Laguna State Polytechnic University — Sta. Cruz Campus,
+              working toward a career in software development. My coursework and project experience span web development,
+              mobile apps, machine learning, game development, and networking.
+            </p>
+            <p>
+              I learn best by building things. Whether it's contributing game modules to a team-built fire safety
+              education platform, training text classifiers with BERT, or designing a 2D game in Godot, I enjoy
+              the process of turning ideas into working software. I'm looking for OJT and internship opportunities
+              where I can contribute, learn from experienced developers, and grow into a well-rounded full-stack developer.
+            </p>
 
-            <div class="resume-item pb-0">
-              <h4>Aeron Jhed V. Lachano</h4>
-              <p><em>Motivated Computer Science student with a strong foundation in web and mobile application development. Experienced in administrative support and data management, with a keen eye for detail and a passion for building efficient software solutions.</em></p>
-              <ul>
-                <li>Laguna, Philippines</li>
-                <li>+63 992 274 0033</li>
-                <li>aeronlachano@gmail.com</li>
-              </ul>
-            </div><!-- End Resume Item -->
+            <div class="about__details">
+              <div class="about__detail">
+                <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                <span>Laguna, Philippines</span>
+              </div>
+              <div class="about__detail">
+                <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                <span>BS Computer Science</span>
+              </div>
+              <div class="about__detail">
+                <i class="bi bi-building" aria-hidden="true"></i>
+                <span>LSPU — Sta. Cruz Campus</span>
+              </div>
+              <div class="about__detail">
+                <i class="bi bi-calendar-check" aria-hidden="true"></i>
+                <span>4th Year (2022 – Present)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Science in Computer Science</h4>
-              <h5>2022 - Present</h5>
-              <p><em>Laguna State Polytechnic University - Sta. Cruz Campus</em></p>
-              <p>Currently focusing on software engineering, algorithms, and systems design.</p>
-            </div><!-- End Resume Item -->
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Technical Skills</p>
+          <h2 class="section-title">What I work with</h2>
+          <p class="section-subtitle">Skills I've developed through coursework, projects, and hands-on practice.</p>
+        </div>
 
-            <div class="resume-item">
-              <h4>Senior High School (STEM/TVL)</h4>
-              <h5>2020 - 2022</h5>
-              <p><em>San Pablo Colleges</em></p>
-              <p>Completed senior high school with specialization in Science, Technology, Engineering, and Mathematics.</p>
-            </div><!-- End Resume Item -->
+        <div class="skills-grid">
 
+          <div class="skill-group">
+            <h3 class="skill-group__title">
+              <i class="bi bi-code-slash" aria-hidden="true"></i> Languages
+            </h3>
+            <div class="skill-group__tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">GDScript</span>
+            </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Data Entry & Administrative Support</h4>
-              <h5>(2 Months Duration)</h5>
-              <p><em>Municipality of Rizal, Laguna</em></p>
-              <ul>
-                <li>Managed data entry tasks with high accuracy and efficiency.</li>
-                <li>Assisted in creating and formatting PowerPoint presentations for municipal reporting.</li>
-                <li>Supported office operations and document organization.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+          <div class="skill-group">
+            <h3 class="skill-group__title">
+              <i class="bi bi-tools" aria-hidden="true"></i> Frameworks &amp; Tools
+            </h3>
+            <div class="skill-group__tags">
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Godot</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+            </div>
+          </div>
 
-            <div class="resume-item">
-              <h4>Library Assistant & Service Staff</h4>
-              <h5>(1 Month Duration)</h5>
-              <p><em>Rizal Re-creation Center</em></p>  
-              <ul>
-                <li>Performed data entry and inventory management for the library system.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+          <div class="skill-group">
+            <h3 class="skill-group__title">
+              <i class="bi bi-robot" aria-hidden="true"></i> Machine Learning &amp; NLP
+            </h3>
+            <div class="skill-group__tags">
+              <span class="skill-tag">BERT</span>
+              <span class="skill-tag">spaCy</span>
+              <span class="skill-tag">NLTK</span>
+              <span class="skill-tag">Text Classification</span>
+              <span class="skill-tag">Jupyter Notebook</span>
+            </div>
+          </div>
 
+          <div class="skill-group">
+            <h3 class="skill-group__title">
+              <i class="bi bi-hdd-network" aria-hidden="true"></i> Networking
+            </h3>
+            <div class="skill-group__tags">
+              <span class="skill-tag">Cisco IOS</span>
+              <span class="skill-tag">Routing Protocols</span>
+              <span class="skill-tag">Packet Tracer</span>
+              <span class="skill-tag">Network Topologies</span>
+              <span class="skill-tag">CLI</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">
+              <i class="bi bi-people" aria-hidden="true"></i> Collaboration
+            </h3>
+            <div class="skill-group__tags">
+              <span class="skill-tag">Team Projects</span>
+              <span class="skill-tag">GitHub Collaboration</span>
+              <span class="skill-tag">Agile Workflows</span>
+              <span class="skill-tag">Code Review</span>
+            </div>
           </div>
 
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Resume Section -->
+    <!-- ═══════════ EXPERIENCE & EDUCATION ═══════════ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Background</p>
+          <h2 class="section-title">Experience &amp; Education</h2>
+        </div>
 
-    
- 
+        <div class="experience-columns">
 
+          <!-- Education -->
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">
+              <i class="bi bi-mortarboard" aria-hidden="true"></i> Education
+            </h3>
+            <div class="timeline">
+              <div class="timeline__item">
+                <h4 class="timeline__title">Bachelor of Science in Computer Science</h4>
+                <p class="timeline__subtitle">Laguna State Polytechnic University — Sta. Cruz Campus</p>
+                <p class="timeline__date">2022 – Present (4th Year)</p>
+                <div class="timeline__desc">
+                  Focusing on software engineering, algorithms, systems design, machine learning, and networking.
+                  Active in team-based projects including the Berong SafeScape platform.
+                </div>
+              </div>
+              <div class="timeline__item">
+                <h4 class="timeline__title">Senior High School (STEM/TVL)</h4>
+                <p class="timeline__subtitle">San Pablo Colleges</p>
+                <p class="timeline__date">2020 – 2022</p>
+                <div class="timeline__desc">
+                  Completed senior high school with specialization in Science, Technology, Engineering, and Mathematics.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div>
+            <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">
+              <i class="bi bi-briefcase" aria-hidden="true"></i> Experience
+            </h3>
+            <div class="timeline">
+              <div class="timeline__item">
+                <h4 class="timeline__title">Data Entry &amp; Administrative Support</h4>
+                <p class="timeline__subtitle">Municipality of Rizal, Laguna</p>
+                <p class="timeline__date">2 Months</p>
+                <div class="timeline__desc">
+                  <ul>
+                    <li>Managed data entry tasks with high accuracy and efficiency.</li>
+                    <li>Created and formatted PowerPoint presentations for municipal reporting.</li>
+                    <li>Supported office operations and document organization.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <h4 class="timeline__title">Library Assistant &amp; Service Staff</h4>
+                <p class="timeline__subtitle">Rizal Re-creation Center</p>
+                <p class="timeline__date">1 Month</p>
+                <div class="timeline__desc">
+                  <ul>
+                    <li>Performed data entry and inventory management for the library system.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">I'm open to OJT, internship, and entry-level opportunities. Feel free to reach out.</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:aeronlachano@gmail.com" class="contact-card" id="contact-email">
+            <div class="contact-card__icon">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="contact-card__label">Email</p>
+              <p class="contact-card__value">aeronlachano@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+639922740033" class="contact-card" id="contact-phone">
+            <div class="contact-card__icon">
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="contact-card__label">Phone</p>
+              <p class="contact-card__value">+63 992 274 0033</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+            <div class="contact-card__icon">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="contact-card__label">GitHub</p>
+              <p class="contact-card__value">Lakano2499</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/aeron-jhed-lachano-a6b87637b/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+            <div class="contact-card__icon">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="contact-card__label">LinkedIn</p>
+              <p class="contact-card__value">Aeron Jhed Lachano</p>
+            </div>
+          </a>
+
+          <div class="contact-card" id="contact-location">
+            <div class="contact-card__icon">
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+            </div>
+            <div>
+              <p class="contact-card__label">Location</p>
+              <p class="contact-card__value">Laguna, Philippines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative dark-background">
-
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
+      <p class="footer__text">
+        &copy; 2026 Aeron Jhed V. Lachano. All rights reserved.<br>
+        Original template by <a href="https://bootstrapmade.com/">BootstrapMade</a>.
+        Distributed by <a href="https://themewagon.com">ThemeWagon</a>.
+      </p>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scroll-top-btn" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Portfolio JS (no dependencies) -->
+  <script src="assets/js/portfolio.js"></script>
 
 </body>
 
 </html>
-</html>
-                <div class="col-md-12">
