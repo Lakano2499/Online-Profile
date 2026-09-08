@@ -10,6 +10,10 @@
   const navbar = document.getElementById('navbar');
   const scrollTopBtn = document.getElementById('scroll-top-btn');
 
+  function getNavbarHeight() {
+    return navbar ? navbar.offsetHeight : 64;
+  }
+
   function handleScroll() {
     const scrollY = window.scrollY;
 
@@ -91,7 +95,8 @@
   function updateActiveLink() {
     var sections = document.querySelectorAll('section[id]');
     var navLinksAll = document.querySelectorAll('.navbar__link[href^="#"]');
-    var scrollY = window.scrollY + 120;
+    var offset = getNavbarHeight() + 32;
+    var scrollY = window.scrollY + offset;
 
     var currentSection = '';
     sections.forEach(function (section) {
@@ -119,12 +124,8 @@
       var target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        var offset = 80; // navbar height + some padding
-        var targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
+        // Use CSS scroll-margin-top for offset; plain scrollIntoView respects it
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });

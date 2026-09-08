@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aeron Jhed V. Lachano — Computer Science Student & Aspiring Full-Stack Developer</title>
+  <title>Aeron Jhed V. Lachano — Computer Science Student &amp; Aspiring Full-Stack Developer</title>
   <meta name="description"
     content="Portfolio of Aeron Jhed V. Lachano, a fourth-year Computer Science student at Laguna State Polytechnic University with experience in web development, machine learning, game development, and collaborative software projects.">
   <meta name="keywords"
@@ -78,24 +78,52 @@
     <!-- ═══════════ HERO ═══════════ -->
     <section id="home" class="hero">
       <div class="container">
-        <div class="hero__content">
-          <p class="hero__greeting">Hello, I'm</p>
-          <h1 class="hero__name">Aeron Jhed V. Lachano</h1>
-          <p class="hero__headline">Computer Science Student &amp; Aspiring Full-Stack Developer</p>
-          <p class="hero__intro">
-            Fourth-year BS Computer Science student at Laguna State Polytechnic University
-            with hands-on experience in web development, machine learning, game development,
-            and team-based software projects. Looking for OJT and internship opportunities
-            where I can apply and grow my skills.
-          </p>
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">
-              <i class="bi bi-code-slash" aria-hidden="true"></i> View My Projects
-            </a>
-            <a href="#contact" class="btn btn--outline">
-              <i class="bi bi-envelope" aria-hidden="true"></i> Contact Me
-            </a>
+        <div class="hero__inner">
+
+          <!-- Left: Text content -->
+          <div class="hero__left">
+            <p class="hero__greeting">Hello, I'm</p>
+            <h1 class="hero__name">Aeron Jhed V. Lachano</h1>
+            <p class="hero__headline">Computer Science Student &amp; Aspiring Full-Stack Developer</p>
+            <p class="hero__intro">
+              Fourth-year BS Computer Science student at Laguna State Polytechnic University
+              with hands-on experience in web development, machine learning, game development,
+              and team-based software projects. Looking for OJT and internship opportunities
+              where I can apply and grow my skills.
+            </p>
+            <p class="hero__status">Available for OJT / Internship — Laguna &amp; Remote</p>
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">
+                <i class="bi bi-code-slash" aria-hidden="true"></i> View My Projects
+              </a>
+              <a href="#contact" class="btn btn--outline">
+                <i class="bi bi-envelope" aria-hidden="true"></i> Contact Me
+              </a>
+            </div>
           </div>
+
+          <!-- Right: Framed project preview -->
+          <div class="hero__right">
+            <div class="hero__browser-frame">
+              <div class="hero__browser-chrome">
+                <div class="browser-dots" aria-hidden="true">
+                  <span class="browser-dot browser-dot--red"></span>
+                  <span class="browser-dot browser-dot--amber"></span>
+                  <span class="browser-dot browser-dot--green"></span>
+                </div>
+                <div class="browser-bar">
+                  <span class="browser-bar-live">Live</span>
+                  <span class="browser-bar-url">bfpscberong.app — Berong SafeScape</span>
+                </div>
+              </div>
+              <img
+                src="assets/img/project-safescape.jpg"
+                alt="Screenshot of the Berong SafeScape fire safety education platform — featured project"
+                class="hero__preview-img"
+                loading="eager">
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -114,130 +142,140 @@
 
           <!-- SafeScape — Featured Card -->
           <article class="project-card project-card--featured">
-            <img src="assets/img/project-safescape.jpg"
-              alt="Screenshot of the Berong SafeScape fire safety education platform showing the dashboard with learning modules, quizzes, and progress tracking"
-              class="project-card__image" loading="lazy">
-            <div class="project-card__body">
-              <h3 class="project-card__title">Berong SafeScape</h3>
-              <p class="project-card__desc">
-                A web-based fire safety education platform built for the BFP Santa Cruz community.
-                Features age-segmented learning paths, interactive safety games, quizzes, a badge
-                system, and certificate generation for community members.
-              </p>
-              <p class="project-card__role">
-                Team contribution — Developed the Task Master interactive game module within the Kids dashboard.
-              </p>
-              <div class="project-card__tech">
-                <span class="tech-tag">Laravel</span>
-                <span class="tech-tag">Inertia.js</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Game Logic</span>
+            <div class="project-card__inner">
+              <div class="project-card__image-wrap">
+                <img src="assets/img/project-safescape.jpg"
+                  alt="Screenshot of the Berong SafeScape fire safety education platform showing the dashboard with learning modules, quizzes, and progress tracking"
+                  class="project-card__image" loading="lazy">
               </div>
-              <div class="project-card__links">
-                <a href="https://bfpscberong.app/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn--primary btn--sm">
-                  <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Site
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Fire Inspector Game -->
-          <article class="project-card">
-            <img src="assets/img/project-fire-game.jpg"
-              alt="Screenshot of the Fire Inspector Game — a 2D pixel art game where players inspect buildings for fire hazards"
-              class="project-card__image" loading="lazy">
-            <div class="project-card__body">
-              <h3 class="project-card__title">Fire Inspector Game</h3>
-              <p class="project-card__desc">
-                A complete 2D game built with the Godot engine where players take on the role
-                of a fire inspector, identifying hazards and ensuring building safety through
-                gameplay, asset integration, and level design.
-              </p>
-              <p class="project-card__role">
-                Solo project — Full game design and development.
-              </p>
-              <div class="project-card__tech">
-                <span class="tech-tag">Godot</span>
-                <span class="tech-tag">GDScript</span>
-                <span class="tech-tag">2D Game Design</span>
-                <span class="tech-tag">Asset Integration</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://github.com/Lakano2499/Fire_Inspector_Game" target="_blank" rel="noopener noreferrer"
-                  class="btn btn--outline btn--sm">
-                  <i class="bi bi-github" aria-hidden="true"></i> GitHub
-                </a>
+              <div class="project-card__body">
+                <p class="project-badge"><i class="bi bi-star-fill" aria-hidden="true"></i> Flagship Project</p>
+                <h3 class="project-card__title">Berong SafeScape</h3>
+                <p class="project-card__desc">
+                  A web-based fire safety education platform built for the BFP Santa Cruz community.
+                  Features age-segmented learning paths, interactive safety games, quizzes, a badge
+                  system, and certificate generation for community members.
+                </p>
+                <p class="project-card__role">
+                  Team contribution — Developed the Task Master interactive game module within the Kids dashboard.
+                </p>
+                <div class="project-card__tech">
+                  <span class="tech-tag">Laravel</span>
+                  <span class="tech-tag">Inertia.js</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Game Logic</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://bfpscberong.app/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--primary btn--sm">
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i> Live Site
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- Ecommerce Mobile App -->
-          <article class="project-card">
-            <img src="assets/img/project-flutter.jpg"
-              alt="Screenshot of a Flutter ecommerce mobile application showing a product listing grid with add-to-cart buttons"
-              class="project-card__image" loading="lazy">
-            <div class="project-card__body">
-              <h3 class="project-card__title">Ecommerce Mobile App</h3>
-              <p class="project-card__desc">
-                A mobile shopping application with product browsing, user authentication,
-                and a dynamic cart system. Built using Flutter with Material Design UI
-                principles and a Figma-based design workflow.
-              </p>
-              <p class="project-card__role">
-                Solo project — Full-stack mobile development.
-              </p>
-              <div class="project-card__tech">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Dart</span>
-                <span class="tech-tag">Figma</span>
-                <span class="tech-tag">Material Design</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer"
-                  class="btn btn--outline btn--sm">
-                  <i class="bi bi-github" aria-hidden="true"></i> GitHub
-                </a>
-              </div>
-            </div>
-          </article>
+          <!-- Secondary projects row -->
+          <div class="projects-secondary-grid">
 
-          <!-- ML / NLP Projects -->
-          <article class="project-card">
-            <img src="assets/img/project-ml-nlp.jpg"
-              alt="Screenshot of a Jupyter Notebook with BERT text classification code, confusion matrix, and NLP pipeline output"
-              class="project-card__image" loading="lazy">
-            <div class="project-card__body">
-              <h3 class="project-card__title">ML &amp; NLP Projects</h3>
-              <p class="project-card__desc">
-                A collection of machine learning and natural language processing course projects
-                covering text classification with BERT, text preprocessing with spaCy and NLTK,
-                and data analysis workflows.
-              </p>
-              <p class="project-card__role">
-                Coursework — Research and implementation.
-              </p>
-              <div class="project-card__tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">BERT</span>
-                <span class="tech-tag">spaCy</span>
-                <span class="tech-tag">NLTK</span>
-                <span class="tech-tag">Jupyter</span>
+            <!-- Fire Inspector Game -->
+            <article class="project-card">
+              <img src="assets/img/project-fire-game.png"
+                alt="Screenshot of the Fire Inspector Game — a 2D pixel art game where players inspect buildings for fire hazards"
+                class="project-card__image" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">Fire Inspector Game</h3>
+                <p class="project-card__desc">
+                  A complete 2D game built with the Godot engine where players take on the role
+                  of a fire inspector, identifying hazards and ensuring building safety through
+                  gameplay, asset integration, and level design.
+                </p>
+                <p class="project-card__role">
+                  Solo project — Full game design and development in Godot.
+                </p>
+                <div class="project-card__tech">
+                  <span class="tech-tag">Godot</span>
+                  <span class="tech-tag">GDScript</span>
+                  <span class="tech-tag">2D Game Design</span>
+                  <span class="tech-tag">Asset Integration</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/Lakano2499/Fire_Inspector_Game" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--outline btn--sm">
+                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                  </a>
+                </div>
               </div>
-              <div class="project-card__links">
-                <a href="https://github.com/Lakano2499/CSST102-3B-AY2526" target="_blank" rel="noopener noreferrer"
-                  class="btn btn--outline btn--sm">
-                  <i class="bi bi-github" aria-hidden="true"></i> CSST102
-                </a>
-                <a href="https://github.com/Lakano2499/CSST104-3B-AY2526" target="_blank" rel="noopener noreferrer"
-                  class="btn btn--outline btn--sm">
-                  <i class="bi bi-github" aria-hidden="true"></i> CSST104
-                </a>
-              </div>
-            </div>
-          </article>
+            </article>
 
-        </div>
+            <!-- Ecommerce Mobile App -->
+            <article class="project-card">
+              <img src="assets/img/project-flutter.jpg"
+                alt="Screenshot of a Flutter ecommerce mobile application showing a product listing grid with add-to-cart buttons"
+                class="project-card__image" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">Ecommerce Mobile App</h3>
+                <p class="project-card__desc">
+                  A mobile shopping application with product browsing, user authentication,
+                  and a dynamic cart system. Built using Flutter with Material Design UI
+                  principles and a Figma-based design workflow.
+                </p>
+                <p class="project-card__role">
+                  Solo project — Mobile UI &amp; full-stack architecture with Flutter.
+                </p>
+                <div class="project-card__tech">
+                  <span class="tech-tag">Flutter</span>
+                  <span class="tech-tag">Dart</span>
+                  <span class="tech-tag">Figma</span>
+                  <span class="tech-tag">Material Design</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--outline btn--sm">
+                    <i class="bi bi-github" aria-hidden="true"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ML / NLP Projects -->
+            <article class="project-card">
+              <img src="assets/img/project-ml-nlp.jpg"
+                alt="Screenshot of a Jupyter Notebook with BERT text classification code, confusion matrix, and NLP pipeline output"
+                class="project-card__image" loading="lazy">
+              <div class="project-card__body">
+                <h3 class="project-card__title">ML &amp; NLP Projects</h3>
+                <p class="project-card__desc">
+                  A collection of machine learning and natural language processing course projects
+                  covering text classification with BERT, text preprocessing with spaCy and NLTK,
+                  and data analysis workflows.
+                </p>
+                <p class="project-card__role">
+                  Coursework — BERT classification &amp; NLP pipeline implementations.
+                </p>
+                <div class="project-card__tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">BERT</span>
+                  <span class="tech-tag">spaCy</span>
+                  <span class="tech-tag">NLTK</span>
+                  <span class="tech-tag">Jupyter</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://github.com/Lakano2499/CSST102-3B-AY2526" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--outline btn--sm">
+                    <i class="bi bi-github" aria-hidden="true"></i> CSST102
+                  </a>
+                  <a href="https://github.com/Lakano2499/CSST104-3B-AY2526" target="_blank" rel="noopener noreferrer"
+                    class="btn btn--outline btn--sm">
+                    <i class="bi bi-github" aria-hidden="true"></i> CSST104
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /projects-secondary-grid -->
+
+        </div><!-- /projects-grid -->
       </div>
     </section>
 
@@ -250,14 +288,15 @@
         </div>
 
         <div class="about-grid">
-          <img src="assets/img/profile-400.jpg" alt="Portrait of Aeron Jhed V. Lachano" class="about__photo" width="400"
-            height="400">
+          <div class="about__photo-wrap">
+            <img src="assets/img/profile-400.jpg" alt="Portrait of Aeron Jhed V. Lachano" class="about__photo"
+              width="400" height="400">
+          </div>
           <div class="about__text">
             <p>
               I'm a fourth-year Computer Science student at Laguna State Polytechnic University — Sta. Cruz Campus,
               working toward a career in software development. My coursework and project experience span web
-              development,
-              mobile apps, machine learning, game development, and networking.
+              development, mobile apps, machine learning, game development, and networking.
             </p>
             <p>
               I learn best by building things. Whether it's contributing game modules to a team-built fire safety
@@ -303,7 +342,8 @@
 
           <div class="skill-group">
             <h3 class="skill-group__title">
-              <i class="bi bi-code-slash" aria-hidden="true"></i> Languages
+              <span class="skill-group__title-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
+              Languages
             </h3>
             <div class="skill-group__tags">
               <span class="skill-tag">Python</span>
@@ -317,7 +357,8 @@
 
           <div class="skill-group">
             <h3 class="skill-group__title">
-              <i class="bi bi-tools" aria-hidden="true"></i> Frameworks &amp; Tools
+              <span class="skill-group__title-icon" aria-hidden="true"><i class="bi bi-tools"></i></span>
+              Frameworks &amp; Tools
             </h3>
             <div class="skill-group__tags">
               <span class="skill-tag">Flutter</span>
@@ -331,7 +372,8 @@
 
           <div class="skill-group">
             <h3 class="skill-group__title">
-              <i class="bi bi-robot" aria-hidden="true"></i> Machine Learning &amp; NLP
+              <span class="skill-group__title-icon" aria-hidden="true"><i class="bi bi-robot"></i></span>
+              Machine Learning &amp; NLP
             </h3>
             <div class="skill-group__tags">
               <span class="skill-tag">BERT</span>
@@ -344,7 +386,8 @@
 
           <div class="skill-group">
             <h3 class="skill-group__title">
-              <i class="bi bi-hdd-network" aria-hidden="true"></i> Networking
+              <span class="skill-group__title-icon" aria-hidden="true"><i class="bi bi-hdd-network"></i></span>
+              Networking
             </h3>
             <div class="skill-group__tags">
               <span class="skill-tag">Cisco IOS</span>
@@ -357,7 +400,8 @@
 
           <div class="skill-group">
             <h3 class="skill-group__title">
-              <i class="bi bi-people" aria-hidden="true"></i> Collaboration
+              <span class="skill-group__title-icon" aria-hidden="true"><i class="bi bi-people"></i></span>
+              Collaboration
             </h3>
             <div class="skill-group__tags">
               <span class="skill-tag">Team Projects</span>
@@ -383,7 +427,7 @@
 
           <!-- Education -->
           <div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">
+            <h3 class="timeline-column__heading">
               <i class="bi bi-mortarboard" aria-hidden="true"></i> Education
             </h3>
             <div class="timeline">
@@ -409,7 +453,7 @@
 
           <!-- Experience -->
           <div>
-            <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">
+            <h3 class="timeline-column__heading">
               <i class="bi bi-briefcase" aria-hidden="true"></i> Experience
             </h3>
             <div class="timeline">
@@ -452,58 +496,62 @@
             out.</p>
         </div>
 
-        <div class="contact-grid">
-          <a href="mailto:aeronlachano@gmail.com" class="contact-card" id="contact-email">
+        <div class="contact-layout">
+
+          <!-- Primary: Email -->
+          <a href="mailto:aeronlachano@gmail.com" class="contact-card contact-card--primary" id="contact-email">
             <div class="contact-card__icon">
               <i class="bi bi-envelope" aria-hidden="true"></i>
             </div>
             <div>
-              <p class="contact-card__label">Email</p>
+              <p class="contact-card__label">Email — Primary Contact</p>
               <p class="contact-card__value">aeronlachano@gmail.com</p>
             </div>
           </a>
 
-          <a href="tel:+639922740033" class="contact-card" id="contact-phone">
-            <div class="contact-card__icon">
-              <i class="bi bi-telephone" aria-hidden="true"></i>
-            </div>
-            <div>
-              <p class="contact-card__label">Phone</p>
-              <p class="contact-card__value">+63 992 274 0033</p>
-            </div>
-          </a>
+          <!-- Secondary row: Phone, GitHub, LinkedIn -->
+          <div class="contact-cards-row">
 
-          <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer" class="contact-card"
-            id="contact-github">
-            <div class="contact-card__icon">
-              <i class="bi bi-github" aria-hidden="true"></i>
-            </div>
-            <div>
-              <p class="contact-card__label">GitHub</p>
-              <p class="contact-card__value">Lakano2499</p>
-            </div>
-          </a>
+            <a href="tel:+639922740033" class="contact-card" id="contact-phone">
+              <div class="contact-card__icon">
+                <i class="bi bi-telephone" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-card__label">Phone</p>
+                <p class="contact-card__value">+63 992 274 0033</p>
+              </div>
+            </a>
 
-          <a href="https://www.linkedin.com/in/aeron-jhed-lachano-a6b87637b/" target="_blank" rel="noopener noreferrer"
-            class="contact-card" id="contact-linkedin">
-            <div class="contact-card__icon">
-              <i class="bi bi-linkedin" aria-hidden="true"></i>
-            </div>
-            <div>
-              <p class="contact-card__label">LinkedIn</p>
-              <p class="contact-card__value">Aeron Jhed Lachano</p>
-            </div>
-          </a>
+            <a href="https://github.com/Lakano2499" target="_blank" rel="noopener noreferrer" class="contact-card"
+              id="contact-github">
+              <div class="contact-card__icon">
+                <i class="bi bi-github" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-card__label">GitHub</p>
+                <p class="contact-card__value">Lakano2499</p>
+              </div>
+            </a>
 
-          <div class="contact-card" id="contact-location">
-            <div class="contact-card__icon">
-              <i class="bi bi-geo-alt" aria-hidden="true"></i>
-            </div>
-            <div>
-              <p class="contact-card__label">Location</p>
-              <p class="contact-card__value">Laguna, Philippines</p>
-            </div>
-          </div>
+            <a href="https://www.linkedin.com/in/aeron-jhed-lachano-a6b87637b/" target="_blank"
+              rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+              <div class="contact-card__icon">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="contact-card__label">LinkedIn</p>
+                <p class="contact-card__value">Aeron Jhed Lachano</p>
+              </div>
+            </a>
+
+          </div><!-- /contact-cards-row -->
+
+          <!-- Location as supporting text -->
+          <p class="contact-location">
+            <i class="bi bi-geo-alt" aria-hidden="true"></i>
+            Laguna, Philippines &mdash; Open to on-site OJT in Laguna / nearby areas and remote opportunities.
+          </p>
+
         </div>
       </div>
     </section>
