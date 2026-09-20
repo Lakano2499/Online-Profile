@@ -9,25 +9,34 @@ export interface TimelineItem {
   sketchTag?: string;
 }
 
+export interface CollaborationItem {
+  id: string;
+  title: string;
+  context: string;
+  role: string;
+  responsibilities: string[];
+  sketchTag?: string;
+}
+
 export const educationData: TimelineItem[] = [
   {
     id: "lspu",
     title: "Bachelor of Science in Computer Science",
     institution: "Laguna State Polytechnic University — Sta. Cruz Campus",
-    period: "2022 – Present (4th Year)",
+    period: "2023 – 2027 (Expected Graduation · 4th Year)",
     isCurrent: true,
     description:
-      "Focusing on software engineering, algorithms, systems design, machine learning, and networking. Active in team-based projects including the Berong SafeScape platform.",
+      "Specializing in software development and data analytics. Coursework covers software engineering, data structures & algorithms, machine learning, systems architecture, and computer networking.",
     sketchTag: "Current Studies"
   },
   {
     id: "spc",
-    title: "Senior High School (STEM/TVL)",
+    title: "Senior High School (STEM Strand)",
     institution: "San Pablo Colleges",
     period: "2020 – 2022",
     description:
-      "Completed senior high school with specialization in Science, Technology, Engineering, and Mathematics.",
-    sketchTag: "Foundations"
+      "Graduated under the Science, Technology, Engineering, and Mathematics strand with core academic foundations in mathematics and science.",
+    sketchTag: "Academic Foundations"
   }
 ];
 
@@ -38,9 +47,9 @@ export const experienceData: TimelineItem[] = [
     institution: "Municipality of Rizal, Laguna",
     period: "2 Months",
     highlights: [
-      "Managed data entry tasks with high accuracy and efficiency.",
-      "Created and formatted PowerPoint presentations for municipal reporting.",
-      "Supported office operations and document organization."
+      "Managed municipal data entry tasks with high accuracy and efficiency.",
+      "Prepared and formatted presentation decks for municipal office reporting.",
+      "Assisted administrative staff with document filing and office operations."
     ],
     sketchTag: "Public Service"
   },
@@ -50,8 +59,36 @@ export const experienceData: TimelineItem[] = [
     institution: "Rizal Re-creation Center",
     period: "1 Month",
     highlights: [
-      "Performed data entry and inventory management for the library system."
+      "Assisted in cataloging, book inventory records, and patron service support.",
+      "Performed digital data entry tasks to maintain organized record systems."
     ],
     sketchTag: "Records & Support"
+  }
+];
+
+export const collaborationData: CollaborationItem[] = [
+  {
+    id: "safescape-collab",
+    title: "Berong SafeScape Platform",
+    context: "LSPU Academic Capstone Project",
+    role: "Module Developer & Team Contributor",
+    responsibilities: [
+      "Collaborated with teammate to build the interactive fire safety educational platform.",
+      "Developed and integrated the interactive Task Master educational module.",
+      "Participated in code integration, UI component alignment, and client-side testing."
+    ],
+    sketchTag: "Web Platform"
+  },
+  {
+    id: "fitness-collab",
+    title: "Rockies Fitness Tracker App",
+    context: "Collaborative Mobile Application",
+    role: "Frontend & Integration Contributor",
+    responsibilities: [
+      "Contributed to Flutter mobile UI layouts and component modularization.",
+      "Assisted in state integration and workout logging feature testing.",
+      "Collaborated on backend data synchronization with Firebase and Supabase."
+    ],
+    sketchTag: "Mobile App"
   }
 ];

@@ -26,29 +26,34 @@ export function Hero() {
 
             <div className="sketch-hero__headline-wrap">
               <p className="sketch-hero__headline">
-                Computer Science Student &amp;{" "}
                 <span className="sketch-headline-highlight">
-                  Aspiring Full-Stack Developer
+                  Computer Science Student · Software Development &amp; Data Analytics
                   <SketchUnderline className="sketch-hero-underline" />
                 </span>
               </p>
             </div>
 
             <p className="sketch-hero__intro">
-              Fourth-year BS Computer Science student at Laguna State Polytechnic
-              University with hands-on experience in web development, machine
-              learning, game development, and team-based software projects.
-              Looking for OJT and internship opportunities where I can apply and
-              grow my skills.
+              Fourth-year Computer Science student at Laguna State Polytechnic
+              University seeking OJT and internship opportunities. Experienced in
+              building web platforms, mobile apps, and data-driven solutions,
+              with practical teamwork contributing to the Berong SafeScape project.
             </p>
 
             <div className="sketch-hero__actions">
               <a href="#projects" className="btn btn--primary">
-                View My Projects
+                View Projects
                 <span className="btn-arrow" aria-hidden="true">→</span>
               </a>
-              <a href="#contact" className="btn btn--outline">
-                Contact Me
+              <a
+                href="/assets/docs/aeron-jhed-lachano-cv.pdf"
+                download="Aeron_Jhed_Lachano_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--outline"
+              >
+                Download CV
+                <span className="btn-arrow" aria-hidden="true">↓</span>
               </a>
             </div>
 

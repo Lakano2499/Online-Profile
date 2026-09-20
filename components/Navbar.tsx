@@ -9,15 +9,14 @@ interface NavItem {
   id: string;
 }
 
+// Full visual order: Home → Theme icon → About → Projects → Certificates → Contact
 const navBefore: NavItem[] = [
-  { label: "Home", href: "#home", id: "home" },
-  { label: "Projects", href: "#projects", id: "projects" }
+  { label: "Home", href: "#home", id: "home" }
 ];
 
 const navAfter: NavItem[] = [
   { label: "About", href: "#about", id: "about" },
-  { label: "Skills", href: "#skills", id: "skills" },
-  { label: "Experience", href: "#experience", id: "experience" },
+  { label: "Projects", href: "#projects", id: "projects" },
   { label: "Certificates", href: "#certificates", id: "certificates" },
   { label: "Contact", href: "#contact", id: "contact" }
 ];
@@ -35,17 +34,7 @@ export function Navbar() {
         setIsScrolled(false);
       }
 
-      const sections = [
-        "home",
-        "projects",
-        "about",
-        "skills",
-        "experience",
-        "certificates",
-        "contact"
-      ];
-
-      // Account for short final sections and bottom of document
+      // Ensure Contact becomes active at the bottom of the page
       const isAtBottom =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 60;
@@ -55,14 +44,25 @@ export function Navbar() {
         return;
       }
 
-      // Check sections from bottom to top against sticky header threshold
+      // Check sections from bottom to top against sticky header threshold.
+      // Unlinked sections (skills, experience, education) retain their preceding linked section ('projects')
       const activationPoint = window.scrollY + 140;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const sectionId = sections[i];
-        const el = document.getElementById(sectionId);
+      const allSections = [
+        { id: "contact", linkedId: "contact" },
+        { id: "certificates", linkedId: "certificates" },
+        { id: "education", linkedId: "projects" },
+        { id: "experience", linkedId: "projects" },
+        { id: "skills", linkedId: "projects" },
+        { id: "projects", linkedId: "projects" },
+        { id: "about", linkedId: "about" },
+        { id: "home", linkedId: "home" }
+      ];
+
+      for (const sec of allSections) {
+        const el = document.getElementById(sec.id);
         if (el && el.offsetTop <= activationPoint) {
-          setActiveSection(sectionId);
+          setActiveSection(sec.linkedId);
           return;
         }
       }
@@ -95,7 +95,7 @@ export function Navbar() {
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* Brand without sketchbook badge */}
+        {/* Brand */}
         <a
           href="#home"
           className="sketch-navbar__brand"

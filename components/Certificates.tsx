@@ -10,56 +10,85 @@ export function Certificates() {
   const modalRef = useRef<HTMLDivElement>(null);
   const scrollPositionRef = useRef<number>(0);
 
-  // Close modal with reverse exit animation
+  // Helper to unlock body scroll and restore layout cleanly
+  const unlockScroll = useCallback(() => {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
+    const navbar = document.querySelector<HTMLElement>(".sketch-navbar-wrap");
+    if (navbar) {
+      navbar.style.paddingRight = "";
+    }
+
+    // Ensure scroll position remains exactly where it was before opening
+    const targetY = scrollPositionRef.current;
+    const currentY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    if (Math.abs(currentY - targetY) > 1) {
+      const prevBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo({ top: targetY, left: 0, behavior: "instant" });
+      document.documentElement.style.scrollBehavior = prevBehavior;
+    }
+  }, []);
+
+  // Close modal with reverse exit animation and scroll/focus restoration
   const closeModal = useCallback(() => {
     if (isClosing || !selectedCert) return;
     setIsClosing(true);
+
     setTimeout(() => {
+      unlockScroll();
       setSelectedCert(null);
       setIsClosing(false);
-      // Return focus to the triggering element
+
+      // Return focus to the triggering certificate button WITHOUT scrolling into view
       if (triggerRef.current) {
-        triggerRef.current.focus();
+        triggerRef.current.focus({ preventScroll: true });
         triggerRef.current = null;
       }
     }, 240); // Matches exit animation duration (240ms)
-  }, [isClosing, selectedCert]);
+  }, [isClosing, selectedCert, unlockScroll]);
 
-  // Open modal and store trigger element for focus restoration
+  // Open modal and record scroll position before locking
   const openModal = (cert: Certificate, e: React.MouseEvent<HTMLElement>) => {
     triggerRef.current = e.currentTarget;
-    scrollPositionRef.current = window.scrollY;
+    scrollPositionRef.current =
+      window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     setSelectedCert(cert);
     setIsClosing(false);
   };
 
-  // Scroll locking that preserves scroll position exactly
+  // Scroll locking: non-destructive overflow lock preserving scroll position and preventing layout shift
   useEffect(() => {
     if (selectedCert) {
-      const scrollY = window.scrollY;
-      scrollPositionRef.current = scrollY;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = "100%";
-      document.body.style.overflowY = "scroll"; // Keep scrollbar space to avoid layout shift
-    } else {
-      const scrollY = scrollPositionRef.current;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      document.body.style.overflowY = "";
-      window.scrollTo(0, scrollY);
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+        const navbar = document.querySelector<HTMLElement>(".sketch-navbar-wrap");
+        if (navbar) {
+          navbar.style.paddingRight = `${scrollbarWidth}px`;
+        }
+      }
     }
 
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-      document.body.style.overflowY = "";
+      // Safety cleanup if component unmounts while modal is open
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+      const navbar = document.querySelector<HTMLElement>(".sketch-navbar-wrap");
+      if (navbar) {
+        navbar.style.paddingRight = "";
+      }
     };
   }, [selectedCert]);
 
-  // Handle Escape key and focus trap
+  // Handle Escape key and focus trap within modal
   useEffect(() => {
     if (!selectedCert) return;
 
@@ -101,9 +130,9 @@ export function Certificates() {
       if (modalRef.current) {
         const closeBtn = modalRef.current.querySelector<HTMLElement>(".sketch-modal__close-btn");
         if (closeBtn) {
-          closeBtn.focus();
+          closeBtn.focus({ preventScroll: true });
         } else {
-          modalRef.current.focus();
+          modalRef.current.focus({ preventScroll: true });
         }
       }
     }, 50);
@@ -121,7 +150,7 @@ export function Certificates() {
       <div className="container">
         {/* Section Header with Dynamic Certificate Count */}
         <div className="sketch-section-header">
-          <span className="sketch-label">Entry 06 — Credentials ({certCount})</span>
+          <span className="sketch-label">Entry 07 — Credentials ({certCount})</span>
           <h2 className="sketch-section-title">Certificates &amp; Training</h2>
           <p className="sketch-section-subtitle">
             Showing {certCount} verified completions, workshop credentials, and technical seminar participations.

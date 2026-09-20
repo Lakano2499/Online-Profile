@@ -5,7 +5,7 @@ export function Contact() {
     <section id="contact" className="section section--contact">
       <div className="container">
         <div className="sketch-section-header">
-          <span className="sketch-label">Entry 07 — Get In Touch</span>
+          <span className="sketch-label">Entry 08 — Get In Touch</span>
           <h2 className="sketch-section-title">Let&apos;s Connect</h2>
           <p className="sketch-section-subtitle">
             I&apos;m actively open to OJT, internship, and entry-level software

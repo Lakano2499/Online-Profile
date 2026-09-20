@@ -10,7 +10,7 @@ const metaPills: MetaPill[] = [
   { icon: "📍", text: "Laguna, Philippines" },
   { icon: "🎓", text: "BS Computer Science" },
   { icon: "🏛️", text: "LSPU — Sta. Cruz Campus" },
-  { icon: "📅", text: "4th Year (2022 – Present)" }
+  { icon: "📅", text: "4th Year (2023 – Present)" }
 ];
 
 export function About() {
@@ -18,10 +18,10 @@ export function About() {
     <section id="about" className="section section--about">
       <div className="container">
         <div className="sketch-section-header">
-          <span className="sketch-label">Entry 03 — Background</span>
+          <span className="sketch-label">Entry 02 — Background</span>
           <h2 className="sketch-section-title">A Bit About Who I Am</h2>
           <p className="sketch-section-subtitle">
-            Computer science student, builder, and aspiring full-stack developer.
+            Computer science student, software builder, and data analytics enthusiast.
           </p>
         </div>
 
@@ -59,19 +59,18 @@ export function About() {
             <div className="sketch-about__bio-text">
               <p>
                 I&apos;m a fourth-year Computer Science student at Laguna State
-                Polytechnic University &mdash; Sta. Cruz Campus, working toward a
-                career in software development. My coursework and project
-                experience span web development, mobile apps, machine learning,
-                game development, and networking.
+                Polytechnic University &mdash; Sta. Cruz Campus, preparing for a
+                career in software development and data analytics. My academic
+                projects span web applications, mobile platforms, machine learning,
+                game design, and networking.
               </p>
               <p>
-                I learn best by building things. Whether it&apos;s contributing
-                game modules to a team-built fire safety education platform,
-                training text classifiers with BERT, or designing a 2D game in
-                Godot, I enjoy the process of turning ideas into working
-                software. I&apos;m looking for OJT and internship opportunities
-                where I can contribute, learn from experienced developers, and
-                grow into a well-rounded full-stack developer.
+                I learn best by building practical solutions. Whether
+                contributing interactive modules to a community fire safety
+                education platform, structuring cross-platform mobile apps in
+                Flutter, or analyzing datasets with Python, I enjoy the discipline
+                of turning conceptual models into functional code. I&apos;m eager
+                to bring this focus and curiosity to an OJT or internship role.
               </p>
             </div>
 

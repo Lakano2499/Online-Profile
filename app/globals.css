@@ -1214,7 +1214,19 @@ button {
   letter-spacing: 0.01em;
 }
 
-/* ── Experience & Education ───────────────────────────────── */
+/* ── Anchor Scroll Offsets ────────────────────────────────── */
+#home,
+#about,
+#projects,
+#skills,
+#experience,
+#education,
+#certificates,
+#contact {
+  scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+/* ── Experience & Collaboration ───────────────────────────── */
 .sketch-timeline-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1352,6 +1364,11 @@ button {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+}
+
+/* ── Education Section ────────────────────────────────────── */
+.sketch-education__wrap {
+  max-width: 780px;
 }
 
 /* ── Certificates Section ─────────────────────────────────── */

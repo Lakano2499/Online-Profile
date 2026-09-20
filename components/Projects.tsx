@@ -10,7 +10,7 @@ export function Projects() {
     <section id="projects" className="section section--projects">
       <div className="container">
         <div className="sketch-section-header">
-          <span className="sketch-label">Entry 02 — Portfolio</span>
+          <span className="sketch-label">Entry 03 — Portfolio</span>
           <h2 className="sketch-section-title">Featured Projects</h2>
           <p className="sketch-section-subtitle">
             Projects I&apos;ve built or contributed to, with real-world impact and
