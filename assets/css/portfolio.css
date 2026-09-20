@@ -6,9 +6,12 @@
 /* ── Design Tokens ────────────────────────────────────────── */
 :root {
   /* Colors */
-  --bg-primary: #F8FAFC;
+  --bg-primary: #FAF7F2;
   --bg-secondary: #FFFFFF;
-  --bg-alt: #F1F5F9;
+  --bg-alt: #F4EFE6;
+  --grid-line-color: rgba(18, 62, 68, 0.085);
+  --grid-size: 30px;
+  --margin-line-color: rgba(13, 148, 136, 0.32);
   --text-primary: #0F172A;
   --text-secondary: #334155;
   --text-muted: #64748B;
@@ -74,9 +77,43 @@ body {
   line-height: 1.75;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      var(--grid-line-color) 0px,
+      var(--grid-line-color) 1px,
+      transparent 1px,
+      transparent var(--grid-size)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid-line-color) 0px,
+      var(--grid-line-color) 1px,
+      transparent 1px,
+      transparent var(--grid-size)
+    );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* ── Restrained Notebook Detail: Outer Gutter Margin Line ── */
+.sketch-notebook-margin {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - (var(--container-max) / 2) - 24px);
+  width: 1.5px;
+  background-color: var(--margin-line-color);
+  pointer-events: none;
+  z-index: 1;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .sketch-notebook-margin {
+    display: block;
+  }
 }
 
 img {
